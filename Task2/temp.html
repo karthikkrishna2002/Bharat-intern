@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Conversion</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>TEMPERATURE CONVERSION</h1>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Conversion Formulas</a>
+            <div class="dropdown-content">
+              <a href="#" onclick="showImagePopup('conversion_formula.jpg')">View Conversion Formulas</a>
+            </div>
+          </li>
+          <li><a href="#" onclick="toggleConverter()">Converting Tool</a></li>
+          <li><a href="#" onclick="toggleContactForm()">Feedback</a></li>
+        </ul>
+      </nav>
+  </header>
+
+ 
+ 
+  <div class="popup" id="popup">
+    <img src="" alt="Conversion Formulas" id="popupImage">
+    <button class="back-button" onclick="hideImagePopup()">Back</button>
+  </div>
+
+  <div class="container" id="converterContainer" style="display: none;">
+    <h1>Temperature Converter</h1>
+
+    <label for="input">Enter temperature:</label>
+    <input type="number" id="input" placeholder="Enter temperature..." />
+
+    <label for="unit">Select unit:</label>
+    <select id="unit">
+      <option value="kelvin">Kelvin (K)</option>
+      <option value="celsius">Celsius (°C)</option>
+      <option value="fahrenheit">Fahrenheit (°F)</option>
+      <option value="rankine">Rankine (°R, °Ra)</option>
+      <option value="reaumur">Réaumur (°Ré, °Re)</option>
+    </select>
+
+    <button onclick="convert()">Convert</button>
+
+    <p id="result"></p>
+  </div>
+
+  <div class="container" id="contactForm">
+    <h1>Feedback Form</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name..." />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email..." />
+
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Enter your message..."></textarea>
+
+    <button onclick="submitForm()">Submit</button>
+  </div>
+
+</body>
+</html>
